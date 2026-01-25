@@ -1,0 +1,31 @@
+# Weighted Wood Platform - PBR MTL
+
+newmtl Mat_1
+
+# Opacity
+d 1.0
+Tr 0.0
+
+# Illumination model (PBR-friendly)
+illum 2
+
+# Base color (Albedo)
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+map_Kd Mat_1_Base_color.png
+
+# Metallic
+Pm 0.0
+map_Pm Mat_1_Metallic.png
+
+# Roughness
+Pr 0.5
+map_Pr Mat_1_Roughness.png
+
+# Normal map (OpenGL / +Y)
+map_Bump Mat_1_Normal_OpenGL.png
+# ili (ako loader traži eksplicitno):
+# map_Kn Mat_1_Normal_OpenGL.png
+
+# Emissive (nema)
+Ke 0.0 0.0 0.0

@@ -108,7 +108,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>freetype28d.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\marko\OneDrive\Desktop\RG\Projekat\Hangman\packages\freetype.2.8.0.1\build\native\lib\x64\v141\static\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\packages\freetype.2.8.0.1\build\native\lib\x64\v141\static\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -124,12 +124,24 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>freetype28.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\marko\OneDrive\Desktop\RG\Projekat\Hangman\packages\freetype.2.8.0.1\build\native\lib\x64\v141\static\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\packages\freetype.2.8.0.1\build\native\lib\x64\v141\static\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="Keyboard.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Primitives3D.cpp" />
+    <None Include="model.frag" />
+    <None Include="model.vert" />
+    <None Include="shader3d_with_texture.frag">
+      <FileType>Document</FileType>
+    </None>
+    <ClCompile Include="Renderer3D.cpp" />
+    <ClCompile Include="TextRenderer.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="UIRenderer.cpp" />
     <ClCompile Include="Util.cpp" />
     <ClCompile Include="VAO.cpp" />
   </ItemGroup>
@@ -137,20 +149,41 @@
     <None Include="color.frag" />
     <None Include="color.vert" />
     <None Include="packages.config" />
+    <None Include="shader3d.frag" />
+    <None Include="shader3d.vert" />
+    <None Include="shader3d_with_texture.vert" />
     <None Include="tex.frag" />
     <None Include="tex.vert" />
     <None Include="text.frag" />
     <None Include="text.vert" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="GameState.h" />
+    <ClInclude Include="Keyboard.h" />
+    <ClInclude Include="mesh.hpp" />
+    <ClInclude Include="model.hpp" />
+    <ClInclude Include="Primitives3D.h" />
+    <ClInclude Include="Renderer3D.h" />
+    <ClInclude Include="shader.hpp" />
     <ClInclude Include="stb_image.h" />
+    <ClInclude Include="TextRenderer.h" />
     <ClInclude Include="Texture.h" />
+    <ClInclude Include="UIRenderer.h" />
     <ClInclude Include="Util.h" />
     <ClInclude Include="VAO.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="blackboard.jpg" />
+    <Image Include="cobblestone.jpg" />
     <Image Include="cursor.png" />
+    <Image Include="grass.jpg" />
+    <Image Include="grass2.jpg" />
+    <Image Include="grass3.png" />
+    <Image Include="landscape.jpg" />
+    <Image Include="plank.png" />
+    <Image Include="plank_vert.png" />
+    <Image Include="rope.jpg" />
     <Image Include="student.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
@@ -159,6 +192,9 @@
     <Import Project="packages\glfw.3.4.0\build\native\glfw.targets" Condition="Exists('packages\glfw.3.4.0\build\native\glfw.targets')" />
     <Import Project="packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets" Condition="Exists('packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets')" />
     <Import Project="packages\freetype.2.8.0.1\build\native\freetype.targets" Condition="Exists('packages\freetype.2.8.0.1\build\native\freetype.targets')" />
+    <Import Project="packages\glm.1.0.3\build\native\glm.targets" Condition="Exists('packages\glm.1.0.3\build\native\glm.targets')" />
+    <Import Project="packages\Assimp.redist.3.0.0\build\native\Assimp.redist.targets" Condition="Exists('packages\Assimp.redist.3.0.0\build\native\Assimp.redist.targets')" />
+    <Import Project="packages\Assimp.3.0.0\build\native\Assimp.targets" Condition="Exists('packages\Assimp.3.0.0\build\native\Assimp.targets')" />
   </ImportGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -168,5 +204,8 @@
     <Error Condition="!Exists('packages\glfw.3.4.0\build\native\glfw.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glfw.3.4.0\build\native\glfw.targets'))" />
     <Error Condition="!Exists('packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\freetype.redist.2.8.0.1\build\native\freetype.redist.targets'))" />
     <Error Condition="!Exists('packages\freetype.2.8.0.1\build\native\freetype.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\freetype.2.8.0.1\build\native\freetype.targets'))" />
+    <Error Condition="!Exists('packages\glm.1.0.3\build\native\glm.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\glm.1.0.3\build\native\glm.targets'))" />
+    <Error Condition="!Exists('packages\Assimp.redist.3.0.0\build\native\Assimp.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Assimp.redist.3.0.0\build\native\Assimp.redist.targets'))" />
+    <Error Condition="!Exists('packages\Assimp.3.0.0\build\native\Assimp.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Assimp.3.0.0\build\native\Assimp.targets'))" />
   </Target>
 </Project>

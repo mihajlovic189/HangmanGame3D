@@ -1,4 +1,11 @@
-C:\Users\marko\OneDrive\Desktop\RG\proj\Hangman\Main.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj\Hangman\proj\x64\Debug\Main.obj
-C:\Users\marko\OneDrive\Desktop\RG\proj\Hangman\Texture.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj\Hangman\proj\x64\Debug\Texture.obj
-C:\Users\marko\OneDrive\Desktop\RG\proj\Hangman\Util.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj\Hangman\proj\x64\Debug\Util.obj
-C:\Users\marko\OneDrive\Desktop\RG\proj\Hangman\VAO.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj\Hangman\proj\x64\Debug\VAO.obj
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\Camera.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\proj\x64\Debug\Camera.obj
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\GameState.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\proj\x64\Debug\GameState.obj
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\Keyboard.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\proj\x64\Debug\Keyboard.obj
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\Main.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\proj\x64\Debug\Main.obj
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\Primitives3D.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\proj\x64\Debug\Primitives3D.obj
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\Renderer3D.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\proj\x64\Debug\Renderer3D.obj
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\TextRenderer.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\proj\x64\Debug\TextRenderer.obj
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\Texture.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\proj\x64\Debug\Texture.obj
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\UIRenderer.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\proj\x64\Debug\UIRenderer.obj
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\Util.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\proj\x64\Debug\Util.obj
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\VAO.cpp;C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\proj\x64\Debug\VAO.obj

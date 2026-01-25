@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Shaders">
+      <UniqueIdentifier>{2b5ad505-8097-4eaf-950c-a83540fa1817}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -27,28 +30,67 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Primitives3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Keyboard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UIRenderer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="color.frag">
-      <Filter>Source Files</Filter>
-    </None>
-    <None Include="color.vert">
-      <Filter>Source Files</Filter>
-    </None>
     <None Include="packages.config">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="color.frag">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="color.vert">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="model.frag">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="model.vert">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="shader3d.frag">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="shader3d.vert">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="shader3d_with_texture.frag">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
+    <None Include="shader3d_with_texture.vert">
+      <Filter>Source Files\Shaders</Filter>
+    </None>
     <None Include="tex.frag">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Shaders</Filter>
     </None>
     <None Include="tex.vert">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Shaders</Filter>
     </None>
     <None Include="text.frag">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Shaders</Filter>
     </None>
     <None Include="text.vert">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Shaders</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +106,36 @@
     <ClInclude Include="Texture.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Primitives3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="model.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="shader.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UIRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="student.png">
@@ -73,6 +145,30 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="blackboard.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="cobblestone.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="grass.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="grass2.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="grass3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="plank.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="plank_vert.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="landscape.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="rope.jpg">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

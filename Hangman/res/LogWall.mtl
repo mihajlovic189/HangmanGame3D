@@ -1,0 +1,75 @@
+﻿# =========================
+# WOOD MATERIAL
+# =========================
+newmtl Wood
+
+illum 2
+
+# Transparency
+d 1.0
+Tr 0.0
+
+# Ambient / Diffuse / Specular
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.2 0.2 0.2
+Ns 64.0
+
+# Emissive
+Ke 0.0 0.0 0.0
+
+# Base Color (Albedo)
+map_Kd Wood_BaseColor.jpg
+
+# Ambient Occlusion (nije standard, ali Assimp ga često učita)
+map_Ka Wood_AO.jpg
+
+# Normal map
+map_Bump Wood_DX_Normal.jpg
+# ili (ako želiš eksplicitno)
+# bump Wood_DX_Normal.jpg
+
+# Roughness → Specular intensity (aproksimacija)
+map_Ks Wood_Roughness.jpg
+
+# Metallic → često ide u specular ili se ignoriše
+# (Assimp nema direktnu mapu za metallic u MTL)
+# Možeš je ostaviti za kasnije (custom shader)
+# map_Pm Wood_Metallic.jpg
+
+
+
+# =========================
+# ROPE MATERIAL
+# =========================
+newmtl Rope
+
+illum 2
+
+# Transparency
+d 1.0
+Tr 0.0
+
+# Ambient / Diffuse / Specular
+Ka 1.0 1.0 1.0
+Kd 1.0 1.0 1.0
+Ks 0.1 0.1 0.1
+Ns 32.0
+
+# Emissive
+Ke 0.0 0.0 0.0
+
+# Base Color
+map_Kd Rope_BaseColor.jpg
+
+# Ambient Occlusion
+map_Ka Rope_AO.jpg
+
+# Normal map
+map_Bump Rope_DX_Normal.jpg
+
+# Roughness → Specular
+map_Ks Rope_Roughness.jpg
+
+# Metallic (nema direktnu podršku)
+# map_Pm Rope_Metallic.jpg

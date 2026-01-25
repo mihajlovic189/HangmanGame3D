@@ -1,4 +1,3 @@
-﻿  Main.cpp
-C:\Users\marko\OneDrive\Desktop\RG\proj\Hangman\Main.cpp(582,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\marko\OneDrive\Desktop\RG\proj\Hangman\Main.cpp(583,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  proj.vcxproj -> C:\Users\marko\OneDrive\Desktop\RG\proj\Hangman\x64\Debug\proj.exe
+﻿  Primitives3D.cpp
+C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\Primitives3D.cpp(281,43): warning C4267: '=': conversion from 'size_t' to 'unsigned int', possible loss of data
+  proj.vcxproj -> C:\Users\marko\OneDrive\Desktop\RG\proj3d\Hangman\x64\Debug\proj.exe

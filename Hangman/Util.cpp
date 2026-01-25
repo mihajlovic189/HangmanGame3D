@@ -1,4 +1,4 @@
-#include "Util.h"
+﻿#include "Util.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -66,6 +66,40 @@ unsigned int loadImageToTexture(const char* filePath){
     glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_WRAP_T,GL_CLAMP_TO_EDGE);
     glBindTexture(GL_TEXTURE_2D,0);
     stbi_image_free(data);
+    return tex;
+}
+
+unsigned int loadImageToTextureWithTiling(const char* filepath, bool enableTiling) {
+    stbi_set_flip_vertically_on_load(1);
+    int w, h, ch;
+    unsigned char* data = stbi_load(filepath, &w, &h, &ch, 0);
+    
+    if (!data) {
+        std::cout << "[ERROR] Failed to load texture: " << filepath << std::endl;
+        return 0;
+    }
+
+    GLenum fmt = ch == 4 ? GL_RGBA : (ch == 3 ? GL_RGB : GL_RED);
+    unsigned int tex;
+    glGenTextures(1, &tex);
+    glBindTexture(GL_TEXTURE_2D, tex);
+    glTexImage2D(GL_TEXTURE_2D, 0, fmt, w, h, 0, fmt, GL_UNSIGNED_BYTE, data);
+
+    if (enableTiling) {
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glGenerateMipmap(GL_TEXTURE_2D);
+    } else {
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    }
+
+    glBindTexture(GL_TEXTURE_2D, 0);
+    stbi_image_free(data);    
     return tex;
 }
 
